@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaMvvm.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaMvvm.Views.MainWindow"
+        xmlns:prism="http://prismlibrary.com/"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaMvvm"
+        prism:ViewModelLocator.AutoWireViewModel="True">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="6*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <ContentControl Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3" 
+                        prism:RegionManager.RegionName="ContactsView"
+                        Background="Gray">
+        </ContentControl>
+    </Grid>
+
+</Window>
