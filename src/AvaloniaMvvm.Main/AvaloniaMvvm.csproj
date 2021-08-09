@@ -22,6 +22,7 @@
     <ProjectReference Include="..\AvaloniaMvvm.Modules.Mail\AvaloniaMvvm.Modules.Mail.csproj" />
     <ProjectReference Include="..\AvaloniaMvvm.Modules.Contacts\AvaloniaMvvm.Modules.Contacts.csproj" />
     <ProjectReference Include="..\AvaloniaMvvm.Modules.Calendar\AvaloniaMvvm.Modules.Calendar.csproj" />
+    <ProjectReference Include="..\AvaloniaMvvm.Modules.Message\AvaloniaMvvm.Modules.Message.csproj" />
   </ItemGroup>
   <PropertyGroup>
     <RestoreSources>$(RestoreSources);/home/mouadcherkaoui/Projects/packages;https://api.nuget.org/v3/index.json</RestoreSources>

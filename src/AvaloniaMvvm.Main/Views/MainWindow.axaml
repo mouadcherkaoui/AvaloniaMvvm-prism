@@ -26,12 +26,36 @@
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
-        <ContentControl Grid.Row="1"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3" 
-                        prism:RegionManager.RegionName="ContactsView"
-                        Background="Gray">
-        </ContentControl>
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+            <DockPanel>
+                <Menu DockPanel.Dock="Top">
+                    <MenuItem Header="_File">
+                        <MenuItem Header="_Open..."/>
+                        <Separator/>
+                        <MenuItem Header="_Exit"/>
+                    </MenuItem>
+                    <MenuItem Header="_Edit">
+                        <MenuItem Header="Copy"/>
+                        <MenuItem Header="Paste"/>
+                    </MenuItem>
+                </Menu>
+            </DockPanel>        
+        </Grid>        
+        
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1" prism:RegionManager.RegionName="ContactsView" Background="Gray">
+            </Grid>
+        </Grid>
+
+        <StackPanel 
+            Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" 
+            prism:RegionManager.RegionName="MessageRegion" Background="LightBlue">            
+        </StackPanel>
     </Grid>
 
 </Window>

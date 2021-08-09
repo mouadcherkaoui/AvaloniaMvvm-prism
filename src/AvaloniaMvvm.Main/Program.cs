@@ -17,7 +17,18 @@ namespace AvaloniaMvvm
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .LogToTrace()
-                .UseReactiveUI();
+                .With(new X11PlatformOptions 
+                    {
+                        EnableMultiTouch = true,
+                        UseDBusMenu = true
+                    })
+                .With(new Win32PlatformOptions 
+                    {
+                        EnableMultitouch = true,
+                        AllowEglInitialization = true
+                    })
+                .UseSkia()                
+                .UseReactiveUI()
+                .LogToTrace();
     }
 }
