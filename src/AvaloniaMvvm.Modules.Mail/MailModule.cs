@@ -1,3 +1,4 @@
+using AvaloniaMvvm.Modules.Mail.Services;
 using AvaloniaMvvm.Modules.Mail.Views;
 using Prism.Ioc;
 using Prism.Modularity;
@@ -15,6 +16,7 @@ namespace AvaloniaMvvm.Modules.Mail
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.Register<IMailService, MailService>();
         }
     }
 }
