@@ -12,6 +12,6 @@
         <vm:MailViewViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    <Grid>
+    </Grid>
 </UserControl>

@@ -94,3 +94,7 @@ in our previous example the builder detects that it is not running under Windows
 
 the same way the avalonia framework gives us the possibility to use specific UI mechanism based on the detected platform.
 
+# Prism.Avalonia
+
+now lets talk about Prism library from Microsoft PnP "Patterns and practices" team, 
+
