@@ -1,4 +1,5 @@
 using AvaloniaMvvm.Modules.Mail.Services;
+using AvaloniaMvvm.Modules.Mail.ViewModels;
 using AvaloniaMvvm.Modules.Mail.Views;
 using Prism.Ioc;
 using Prism.Modularity;
@@ -11,12 +12,13 @@ namespace AvaloniaMvvm.Modules.Mail
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var regionManager = containerProvider.Resolve<IRegionManager>();
-            regionManager.RegisterViewWithRegion("MailView", typeof(MailView));
+            regionManager.RegisterViewWithRegion("MailMessagesRegion", typeof(MailView));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.Register<IMailService, MailService>();
+            containerRegistry.RegisterInstance(typeof(MailViewViewModel));
         }
     }
 }

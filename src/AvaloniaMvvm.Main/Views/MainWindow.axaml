@@ -48,13 +48,13 @@
                 <ColumnDefinition Width="3*"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="1" prism:RegionManager.RegionName="ContactsView" Background="Gray">
-            </Grid>
+            <ContentControl Grid.Column="1" prism:RegionManager.RegionName="MailMessagesRegion" Background="Gray">
+            </ContentControl>
         </Grid>
 
         <StackPanel 
             Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" 
-            prism:RegionManager.RegionName="MessageRegion" Background="LightBlue">            
+            prism:RegionManager.RegionName="FooterRegion" Background="LightBlue">            
         </StackPanel>
     </Grid>
 

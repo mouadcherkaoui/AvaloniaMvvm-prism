@@ -4,14 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:prism="http://prismlibrary.com/"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AvaloniaMvvm.Modules.Mail.Views.MailView"
         Background="Green">
 
-    <Design.DataContext>
-        <vm:MailViewViewModel/>
-    </Design.DataContext>
+    <UserControl.DataContext>
+        <vm:MailViewViewModel />
+    </UserControl.DataContext>
 
     <Grid>
+        <ListBox Items="{Binding MailMessages}"></ListBox>    
     </Grid>
+
 </UserControl>

@@ -9,9 +9,6 @@ namespace AvaloniaMvvm.Modules.Mail.Views
         public MailView()
         {
             InitializeComponent();
-#if DEBUG
-            // this.AttachDevTools();
-#endif
         }
 
         private void InitializeComponent()

@@ -10,13 +10,14 @@ namespace AvaloniaMvvm.Modules.Mail.ViewModels
     public class MailViewViewModel : ViewModelBase
     {
         private IMailService mailService;
-        public MailViewViewModel(IMailService mailService)
+        
+        public MailViewViewModel()
         {
-            this.mailService = mailService;
-            this.Mails = new ObservableCollection<MailMessage>(mailService.Messages);
+            this.mailService = new MailService();
+            this.MailMessages = new ObservableCollection<MailMessage>(mailService.Messages);
         }  
 
-        public ObservableCollection<MailMessage> Mails { get; set; } = new ObservableCollection<MailMessage>();
+        public ObservableCollection<MailMessage> MailMessages { get; private set; }
         public string Greeting => "Mail Region";
     }
 }

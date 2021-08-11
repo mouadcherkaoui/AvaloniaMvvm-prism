@@ -1,3 +1,5 @@
+using System;
+
 namespace AvaloniaMvvm.Modules.Mail.Models
 {
     public class MailMessage
